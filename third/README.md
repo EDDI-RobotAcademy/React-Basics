@@ -5,3 +5,7 @@ npm install typescript @types/node @types/react @types/react-dom @types/jest --s
 ## Test
 
 npm run test  
+
+## Start Server
+
+npm start  

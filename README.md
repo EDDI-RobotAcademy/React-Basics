@@ -9,3 +9,7 @@ React Basics
 ## How to make react project
 
 npx create-react-app project-name  
+
+## Make project with TypeScript
+
+npx create-react-app project-name --template=typescript  
