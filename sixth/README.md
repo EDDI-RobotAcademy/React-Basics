@@ -19,7 +19,7 @@ module.exports = {
 
 ```make
 "scripts": {
-	-
+	~~~
 },
 "husky": {
 	"hooks": {
