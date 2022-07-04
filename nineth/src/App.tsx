@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import { Button, Input, TodoItem } from "Component";
+import { Button, Input } from "Component";
 
 const Container = Styled.div`
   min-height: 100vh;
@@ -28,13 +28,10 @@ function App() {
   return (
       <Container>
         <Contents>
-          <TodoItem label="추가된 업무" onDelete={() => alert('삭제')}/>
           <InputContainer>
-            <Input placeholder='해야할 일을 입력하세요' 
-                    onChange={(text) => console.log(text)}/>
+            <Input placeholder='해야할 일을 입력하세요' onChange={(text) => console.log(text)}/>
             <Button label="추가" onClick={() => alert('테스트')}/>
-            <Button label="모두 삭제" backgroundColor='#FF1744' 
-                    hoverColor='#F01440' onClick={() => alert('모두 삭제')}/>
+            <Button label="모두 삭제" backgroundColor='#FF1744' hoverColor='#F01440' onClick={() => alert('모두 삭제')}/>
           </InputContainer>
         </Contents>
       </Container>

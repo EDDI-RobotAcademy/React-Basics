@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styled from 'styled-components';
 
 import { Button, Input, TodoItem } from "Component";
@@ -25,14 +25,16 @@ const InputContainer = Styled.div`
 `;
 
 function App() {
+  const [todo, setTodo] = useState('');
+
   return (
       <Container>
         <Contents>
           <TodoItem label="추가된 업무" onDelete={() => alert('삭제')}/>
           <InputContainer>
             <Input placeholder='해야할 일을 입력하세요' 
-                    onChange={(text) => console.log(text)}/>
-            <Button label="추가" onClick={() => alert('테스트')}/>
+                    onChange={(text) => setTodo(text)}/>
+            <Button label="추가" onClick={() => alert(todo)}/>
             <Button label="모두 삭제" backgroundColor='#FF1744' 
                     hoverColor='#F01440' onClick={() => alert('모두 삭제')}/>
           </InputContainer>
