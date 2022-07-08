@@ -52,14 +52,13 @@ function App() {
   return (
       <Container>
         <Contents>
-          <TodoListContainer data-testid='todoList'>
-            { todoList.map((item, index) => (
+          <TodoListContainer>
+            { todoList.map((item, index) => 
               <TodoItem key={item} label={item} onDelete={() => deleteTodo(index)}/>
-            ))}
+            )}
           </TodoListContainer>
           <InputContainer>
             <Input placeholder='해야할 일을 입력하세요' 
-                    value={todo}
                     onChange={(text) => setTodo(text)}/>
             <Button label="추가" onClick={addTodo}/>
             <Button label="모두 삭제" backgroundColor='#FF1744' 
